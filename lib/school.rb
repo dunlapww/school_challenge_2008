@@ -28,7 +28,8 @@ class School
   end
 
   def convert_end_time_to_clock_time
-    
+    mins = self.end_time.chars.pop(3).join
+    (self.end_time.chop.chop.chop.to_i % 12).to_s + mins
   end
 
 end
